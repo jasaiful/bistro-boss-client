@@ -42,6 +42,31 @@ const Dashboard = () => {
                             <>
                                 <li>
                                     <NavLink to="/dashboard/userHome">
+                                        <FaHome></FaHome>
+                                        User Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/history">
+                                        <FaCalendar></FaCalendar>
+                                        Not History</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/cart">
+                                        <FaShoppingCart></FaShoppingCart>
+                                        My Cart ({cart.length})</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/review">
+                                        <FaAd></FaAd>
+                                        Add a Review</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/paymentHistory">
+                                        <FaList></FaList>
+                                        Real Payment History</NavLink>
+                                </li>
+                                {/* <li>
+                                    <NavLink to="/dashboard/userHome">
                                         <FaHome></FaHome> User Home</NavLink>
                                 </li>
                                 <li>
@@ -58,7 +83,7 @@ const Dashboard = () => {
                                 <li>
                                     <NavLink to="/dashboard/bookings">
                                         <FaList></FaList> My Booking</NavLink>
-                                </li>
+                                </li> */}
                             </>
 
                     }
