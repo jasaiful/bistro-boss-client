@@ -17,6 +17,8 @@ import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 import UpdateItem from "../pages/Dashboard/UpdateItem/UpdateItem";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 
 const MainRoute = createBrowserRouter([
     {
@@ -56,6 +58,10 @@ const MainRoute = createBrowserRouter([
         children: [
             // normal user routes
             {
+                path: 'userHome',
+                element: <UserHome></UserHome>
+            },
+            {
                 path: 'cart',
                 element: <Cart></Cart>
             },
@@ -70,6 +76,10 @@ const MainRoute = createBrowserRouter([
 
             // admin only routes
             {
+                path: 'adminHome',
+                element: <AdminRoute> <AdminHome></AdminHome> </AdminRoute>
+            },
+            {
                 path: 'addItems',
                 element: <AdminRoute><AddItems></AddItems></AdminRoute>
             },
@@ -80,7 +90,7 @@ const MainRoute = createBrowserRouter([
             {
                 path: 'updateItem/:id',
                 element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+                loader: ({params}) => fetch(`https://bistro-boss-server-hazel-iota.vercel.app/menu/${params.id}`)
             },
             {
                 path: 'users',
