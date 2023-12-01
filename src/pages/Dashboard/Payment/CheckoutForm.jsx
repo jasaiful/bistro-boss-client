@@ -90,6 +90,8 @@ const CheckoutForm = () => {
                     status: 'pending'
                 }
 
+
+                
                 // send to database
                const res = await axiosSecure.post('/payments', payment);
                 console.log('payment saved', res.data);

@@ -90,7 +90,7 @@ const MainRoute = createBrowserRouter([
             {
                 path: 'updateItem/:id',
                 element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-                loader: ({params}) => fetch(`https://bistro-boss-server-hazel-iota.vercel.app/menu/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
             },
             {
                 path: 'users',
